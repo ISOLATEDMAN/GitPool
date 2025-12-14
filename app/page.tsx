@@ -1,4 +1,4 @@
-import { GitCommit, GitPullRequest, Code, Zap, Trophy, Users, MessageSquare, Bug, Crown, Medal, Award, TrendingUp, Flame, Star, Target, Folder, Shield, Sword, Crosshair, Activity, ChevronUp, ChevronDown, Sparkles, Rocket, BarChart3, PieChart, ArrowUpRight, Clock, Hash } from "lucide-react";
+import { GitCommit, GitPullRequest, Code, Zap, Trophy, Users, MessageSquare, Bug, Crown, Medal, Award, TrendingUp, Flame, Star, Target, Folder, Shield, Sword, Crosshair, Activity, ChevronUp, ChevronDown, Sparkles, Rocket, BarChart3, PieChart, ArrowUpRight, Clock, Hash, Github } from "lucide-react";
 import { getDashboardData } from "./actions/get-dashboard-data";
 import { TierBarChart } from "@/components/tier-chart";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -199,7 +199,16 @@ export default async function Dashboard() {
               </div>
             </div>
             
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
+              <a 
+                href="https://github.com/ISOLATEDMAN/GitPool" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100 rounded-lg transition-colors"
+              >
+                <Github className="w-5 h-5" />
+                <span className="hidden sm:inline">GitHub</span>
+              </a>
               <Badge variant="outline" className="gap-1">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 Live
