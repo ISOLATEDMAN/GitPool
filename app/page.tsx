@@ -5,6 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ScrollArea } from "@/components/ui/scroll-area";
+
+// Force dynamic rendering - don't pre-render at build time
+export const dynamic = "force-dynamic";
 // Helper for relative time
 function timeAgo(date: Date | null) {
   if (!date) return "";
