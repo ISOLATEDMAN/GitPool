@@ -1,11 +1,12 @@
-import { pgTable, serial, text, integer, timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, serial, text, integer, timestamp, boolean } from 'drizzle-orm/pg-core';
 
 // CHANGE: Export as 'users' (plural), table name is 'users'
 export const users = pgTable('users', {
     id: serial('id').primaryKey(),
     githubId: integer('github_id').unique().notNull(),
     username: text('user_name').notNull(),
-    avatarUrl: text('avatar_url')
+    avatarUrl: text('avatar_url'),
+    isActive: boolean('is_active').default(true).notNull()
 });
 
 export const repositories = pgTable('repositories', {

@@ -16,15 +16,16 @@ export function TierBarChart({ data }: TierChartProps) {
           dataKey="tier" 
           axisLine={false}
           tickLine={false}
-          tick={{ fill: '#71717a', fontWeight: 600, fontSize: 14 }}
+          tick={{ fill: 'currentColor', fontWeight: 600, fontSize: 14 }}
           width={30}
+          className="text-neutral-500 dark:text-neutral-400"
         />
         <Tooltip 
           contentStyle={{ 
-            backgroundColor: '#ffffff', 
-            border: '1px solid #e4e4e7',
+            backgroundColor: 'var(--color-card)',
+            border: '1px solid var(--color-border)',
             borderRadius: '8px',
-            color: '#09090b',
+            color: 'var(--color-card-foreground)',
             boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
           }}
           formatter={(value: number) => [`${value} devs`, 'Count']}
@@ -63,10 +64,10 @@ export function TierPieChart({ data }: TierChartProps) {
         </Pie>
         <Tooltip 
           contentStyle={{ 
-            backgroundColor: '#ffffff', 
-            border: '1px solid #e4e4e7',
+            backgroundColor: 'var(--color-card)',
+            border: '1px solid var(--color-border)',
             borderRadius: '8px',
-            color: '#09090b',
+            color: 'var(--color-card-foreground)',
             boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
           }}
           formatter={(value: number) => [`${value} devs`, 'Count']}
